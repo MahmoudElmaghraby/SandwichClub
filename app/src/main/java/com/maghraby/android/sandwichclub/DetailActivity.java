@@ -30,7 +30,6 @@ public class DetailActivity extends AppCompatActivity {
 
         int position = intent.getIntExtra(EXTRA_POSITION, DEFAULT_POSITION);
         if (position == DEFAULT_POSITION) {
-            // EXTRA_POSITION not found in intent
             closeOnError();
             return;
         }
@@ -39,7 +38,6 @@ public class DetailActivity extends AppCompatActivity {
         String json = sandwiches[position];
         Sandwich sandwich = JsonUtils.parseSandwichJson(json);
         if (sandwich == null) {
-            // Sandwich data unavailable
             closeOnError();
             return;
         }
