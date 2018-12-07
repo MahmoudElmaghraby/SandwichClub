@@ -33,7 +33,6 @@ public class DetailActivity extends AppCompatActivity {
             closeOnError();
             return;
         }
-
         String[] sandwiches = getResources().getStringArray(R.array.sandwich_details);
         String json = sandwiches[position];
         Sandwich sandwich = JsonUtils.parseSandwichJson(json);
